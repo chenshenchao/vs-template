@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "ChenShenChao",
+  "classifications": [
+    "Asp",
+    "Grpc",
+    "File Log"
+  ],
+  "identity": "VSTemplate.AspGrpc",
+  "name": "VSTemplate(AspGrpc)",
+  "shortName": "vstemplate-asp-grpc",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "AspGrpc",
+  "preferNameDirectory": false,
+  "primaryOutputs": [
+    {
+      "path": "VSTemplate.sln"
+    }
+  ],
+  "sources": [
+    {
+      "source": "./",
+      "target": "./",
+      "exclude": [
+        ".template.config/**",
+        "**/Targets/**",
+        "**/Properties/**"
+      ]
+    },
+    {
+      "modifiers": [
+        {
+          "condition": "(!README)",
+          "exclude": [
+            "Readme.md"
+          ]
+        }
+      ]
+    }
+  ],
+  "symbols": {
+    "README": {
+      "displayName": "添加 Readme.md 文件",
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false",
+      "description": "提供 Readme.md 文件"
+    }
+  }
+}
