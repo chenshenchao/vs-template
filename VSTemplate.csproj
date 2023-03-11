@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<PackageType>Template</PackageType>
+		<PackageVersion>1.0.0</PackageVersion>
+		<PackageId>VSTemplate</PackageId>
+		<Title>My Visual Studio Template</Title>
+		<Authors>ChenShenChao</Authors>
+		<Description>My Visual Studio Template.</Description>
+		<PackageTags>Wpf;Template</PackageTags>
+		<TargetFrameworks>netstandard2.1</TargetFrameworks>
+		<IncludeContentInPack>true</IncludeContentInPack>
+		<IncludeBuildOutput>false</IncludeBuildOutput>
+		<ContentTargetFolders>content</ContentTargetFolders>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>	
+	</PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>Targets/Binaries/Debug</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>Targets/Binaries/Release</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Targets\**" />
+    <EmbeddedResource Remove="Targets\**" />
+    <None Remove="Targets\**" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<Content Include="templates\**\*" Exclude="templates\**\Targets\**" />
+		<Compile Remove="**\*" />
+	</ItemGroup>
+</Project>
