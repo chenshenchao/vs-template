@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "ChenShenChao",
+  "classifications": [
+    "Class",
+    "Lib",
+    "Library"
+  ],
+  "identity": "VSTemplate.ClassLib",
+  "name": "VSTemplate(ClassLib)",
+  "shortName": "vstemplate-class-library",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "ClassLib",
+  "preferNameDirectory": false,
+  "primaryOutputs": [
+    {
+      "path": "VSTemplate.sln"
+    }
+  ],
+  "sources": [
+    {
+      "source": "./",
+      "target": "./",
+      "exclude": [
+        ".template.config/**",
+        "**/Targets/**",
+        "**/Properties/**"
+      ]
+    },
+    {
+      "modifiers": [
+        {
+          "condition": "(!README)",
+          "exclude": [
+            "Readme.md"
+          ]
+        }
+      ]
+    }
+  ],
+  "symbols": {
+    "README": {
+      "displayName": "添加 Readme.md 文件",
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true",
+      "description": "提供 Readme.md 文件"
+    }
+  }
+}
