@@ -46,7 +46,7 @@
       "displayName": "添加 Readme.md 文件",
       "type": "parameter",
       "datatype": "bool",
-      "defaultValue": "false",
+      "defaultValue": "true",
       "description": "提供 Readme.md 文件"
     }
   }
