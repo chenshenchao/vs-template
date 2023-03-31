@@ -27,8 +27,9 @@
       "target": "./",
       "exclude": [
         ".template.config/**",
-        "**/Targets/**",
-        "**/Properties/**"
+        "Logs/**",
+        "Targets/**",
+        "Properties/**"
       ]
     },
     {
